@@ -1,4 +1,4 @@
-require_relative 'class/simulator_rm'
+require_relative 'class/simulator_tr'
 
 simulator = SimulatorTR.new
 
@@ -9,6 +9,7 @@ else
 end
 
 puts simulator.place.to_s
+
 begin
   simulator.place_robot
   simulator.control

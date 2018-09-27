@@ -17,13 +17,13 @@ class Robot
   def move
     case @cur_front
     when 'north'
-      move_north!
+      @y_line += 1
     when 'east'
-      move_east!
+      @x_line += 1
     when 'south'
-      move_south!
+      @y_line -= 1
     when 'west'
-      move_west!
+      @x_line -= 1
     end
   end
 
@@ -41,23 +41,5 @@ class Robot
 
   def report
     puts "Im here: x:#{@x_line} y:#{@y_line} and heading #{@cur_front}"
-  end
-
-  private
-
-  def move_north!
-    @y_line += 1
-  end
-
-  def move_south!
-    @y_line -= 1
-  end
-
-  def move_east!
-    @x_line += 1
-  end
-
-  def move_west!
-    @x_line -= 1
   end
 end
