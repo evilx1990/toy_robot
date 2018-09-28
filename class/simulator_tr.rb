@@ -57,10 +57,10 @@ class SimulatorTR
   end
 
   def move?
-    return false if @robot.cur_front.eql?('north') && @robot.y_line.eql?(@place.y_width - 1)
-    return false if @robot.cur_front.eql?('east') && @robot.x_line.eql?(@place.x_length - 1)
-    return false if @robot.cur_front.eql?('south') && @robot.y_line.eql?(0)
-    return false if @robot.cur_front.eql?('west') && @robot.x_line.eql?(0)
+    return false if @robot.cur_front == 'north' && @robot.y_line == @place.y_width - 1
+    return false if @robot.cur_front == 'east' && @robot.x_line == @place.x_length - 1
+    return false if @robot.cur_front == 'south' && @robot.y_line.zero?
+    return false if @robot.cur_front == 'west' && @robot.x_line.zero?
 
     true
   end

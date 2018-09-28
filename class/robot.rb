@@ -29,17 +29,17 @@ class Robot
 
   def right!
     index = fronts.find_index(@cur_front)
-    index = index.equal?(3) ? 0 : index + 1
+    index = index.eql?(3) ? 0 : index + 1
     @cur_front = fronts[index]
   end
 
   def left!
     index = fronts.find_index(@cur_front)
-    index = index.equal?(0) ? 3 : index - 1
+    index = index.eql?(0) ? 3 : index - 1
     @cur_front = fronts[index]
   end
 
   def report
-    puts "Im here: x:#{@x_line} y:#{@y_line} and heading #{@cur_front}"
+    puts "Im here: x:#{x_line} y:#{@y_line} and heading #{@cur_front}"
   end
 end

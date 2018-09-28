@@ -13,6 +13,6 @@ puts simulator.place.to_s
 begin
   simulator.place_robot
   simulator.control
-rescue ArgumentError => ex
-  ex.message
+rescue ArgumentError
+  ArgumentError.backtrace
 end
